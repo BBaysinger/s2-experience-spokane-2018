@@ -1,0 +1,33 @@
+<div id="contest-section" class="container" id="pageWrapper" [class.build-in]="buildInReady">
+  <s2es-header></s2es-header>
+  <div class="row">
+    <div class="col-md-5 left-col">
+      <div #animCanvasWrapper id="createjs-canvas-wrapper">
+        <canvas #animCanvas id="createjs-canvas" width="900" height="850"></canvas>
+      </div>
+    </div>
+    <div class="col-md-7 col-sm-12 right-col">
+      <div class="copy-block">
+        <h1>
+          Win a Trip to <span style="white-space: nowrap">Visit Us.</span>
+        </h1>
+        <p>We're giving one lucky person in the advertising/marketing field an all-expenses-paid trip to <i class="yellow">#ExperienceSpokane</i> with Seven2.</p>
+        <div class="fluid-container">
+          <div class="row">
+            <div class="col-md-6 col-sm-12">
+              <button class="yellow-btn" (click)="playVideo()">
+                <span class="fontello" style="font-size: 30px">&#xe804;</span>
+                <span class="btn-copy">Watch Video</span>
+              </button>
+            </div>
+            <div class="col-md-6 col-sm-12">
+              <button class="border-btn" routerLink="/enter">
+                <span class="btn-copy">Enter to Win</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<div>

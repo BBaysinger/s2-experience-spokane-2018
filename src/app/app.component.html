@@ -1,0 +1,13 @@
+<div id="backgroundWrapper" [ngClass]="backgroundClassName">
+  <div id="bg" [class.build-in]="buildInReady"></div>
+  <s2es-header></s2es-header>
+  <div #floatContainer id="floatContainer">
+    <div #floatContent id="floatContent">
+      <router-outlet (activate)="onOutletActivate($event)"></router-outlet>
+    </div>
+  </div>
+  <s2es-nav-indicator></s2es-nav-indicator>
+  <a href="https://instagram.com/explore/tags/experiencespokane/" target="blank" id="hashtag"><div class="nested">#experiencespokane</div></a>
+  <div #pageShade class="page-shade" [class.collapse-shade]="collapseShade"></div>
+  <s2es-nav-menu></s2es-nav-menu>
+</div>

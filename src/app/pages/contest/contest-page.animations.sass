@@ -1,0 +1,53 @@
+@import "../../shared/bootstrap-breakpoints.sass"
+
+////////////////////////////////////////////////////////////////////////////////
+// Animations
+////////////////////////////////////////////////////////////////////////////////
+
+#pageWrapper h1
+  opacity: 0
+  transform: translateX(10%)
+  transition: transform .3s cubic-bezier(0.250, 0.460, 0.230, 0.995), opacity .3s linear
+
+#pageWrapper.build-in h1
+  opacity: 1
+  transform: translateX(0%)
+
+#pageWrapper h1::after
+  width: 0
+  transition: width .4s cubic-bezier(0.045, 1.450, 0.665, 1.000) .6s
+
+#pageWrapper.build-in h1::after
+  width: 72%
+  @include media-breakpoint-up(md)
+    width: 30%
+
+#pageWrapper p
+  opacity: 0
+  transition: opacity .3s linear .3s
+
+#pageWrapper.build-in p
+  opacity: 1
+
+#pageWrapper .yellow-btn,
+#pageWrapper .border-btn
+  opacity: 0
+  transform: translateY(20%)
+  transition: transform .6s cubic-bezier(0.045, 1.450, 0.665, 1.000), opacity .5s linear
+
+#pageWrapper.build-in .yellow-btn,
+#pageWrapper.build-in .border-btn
+  opacity: 1
+  transform: translateY(0)
+
+#pageWrapper.build-in .yellow-btn
+  transition-delay: 1s
+#pageWrapper.build-in .border-btn
+  transition-delay: 1.4s
+
+#pageWrapper .left-col
+  opacity: 0
+  transition: all .4s linear
+
+#pageWrapper.build-in .left-col
+  opacity: 1

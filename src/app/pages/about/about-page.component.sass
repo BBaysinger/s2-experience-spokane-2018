@@ -1,0 +1,46 @@
+@import "../../shared/bootstrap-breakpoints.sass"
+@import "../../shared/fluid-utils.sass"
+@import "../../shared/variables.sass"
+
+.fontello
+  font-size: 40px
+  margin-right: 50px
+  text-decoration: none
+
+a:link
+  color: #ffffff
+
+button
+  margin-bottom: 50px !important
+  @include media-breakpoint-up(md)
+    margin-bottom: initial
+
+.principle
+  @include fluid-type(320px, 1600px, 18px, 28px)
+
+a:link
+  color: #ffffff
+
+a:visited
+  color: #ffffff
+
+////////////////////////////////////////////////////////////////////////////////
+// Graphic
+////////////////////////////////////////////////////////////////////////////////
+
+.mask-graphic.desktop
+  position: absolute
+  width: 6%
+  max-width: 500px
+  right: calc(100vw / 40 - 0px)
+  bottom: 30px
+  display: none
+  @include media-breakpoint-up(lg)
+    display: block
+
+.mask-graphic.mobile
+  width: 10%
+  margin-bottom: 20px
+  margin-top: 10px
+  @include media-breakpoint-up(md)
+    display: none

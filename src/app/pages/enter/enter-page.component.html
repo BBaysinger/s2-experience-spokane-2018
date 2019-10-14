@@ -1,0 +1,76 @@
+<div class="container" id="pageWrapper" [class.build-in]="buildInReady">
+  <s2es-header></s2es-header>
+  <form class="row" novalidate (ngSubmit)="onSubmit()" [formGroup]="entryForm">
+    <div class="col-md-12">
+      <h1>
+        Enter to Win.
+      </h1>
+    </div>
+    <div class="col-md-6 left-col">
+      <div class="left-col-nested">
+        <div id="enter_form" class="container-fluid">
+          <div class="row">
+            <div class="col-sm-6 form-col">
+              <input type="text" formControlName="firstName" placeholder="First Name" [class.placeholder-shown]="placeholderShown('firstName')">
+            </div>
+            <div class="col-sm-6 form-col">
+              <input type="text" formControlName="lastName" placeholder="Last Name" [class.placeholder-shown]="placeholderShown('lastName')">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 form-col">
+              <input type="text" formControlName="email" placeholder="Email" [class.placeholder-shown]="placeholderShown('email')">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 form-col">
+              <input type="text" formControlName="instagram" placeholder="Instagram Handle" [class.placeholder-shown]="placeholderShown('instagram')">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6 form-col">
+              <input type="text" formControlName="company" placeholder="Company" [class.placeholder-shown]="placeholderShown('company')">
+            </div>
+            <div class="col-sm-6 form-col">
+              <input type="text" formControlName="title" placeholder="Title" [class.placeholder-shown]="placeholderShown('title')">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 right-col">
+
+      <div class="right-col-nested copy-block">
+        <div #animCanvasWrapper id="createjs-canvas-wrapper" class="food-graphic">
+          <canvas #animCanvas id="createjs-canvas" width="750" height="800"></canvas>
+        </div>
+        <h3>Who can enter:</h3>
+        <ul>
+          <li>
+            Any advertising/marketing professional who lives outside of Washington, Idaho, and Oregon.
+          </li>
+          <li>
+            Entrants must be at least 21 years old.
+          </li>
+          <li>
+            Contest begins July 2nd and ends August 20th.
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-6 left-col">
+      <div class="left-col-nested">
+        <div>
+          <label class="custom-checkbox-label">
+            <input type="checkbox" formControlName="agree" checked="checked">
+            <span class="checkmark"></span>&nbsp;&nbsp;I agree to the&nbsp;
+          <a href="/rules" target="blank">Terms & Conditions</a>
+          </label>
+        </div>
+        <button class="yellow-btn" type="submit" [disabled]="entryForm.invalid">
+          <span class="btn-copy">Submit</span>
+        </button>
+      </div>
+    </div>
+  </form>
+</div>

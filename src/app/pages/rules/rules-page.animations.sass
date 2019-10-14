@@ -1,0 +1,31 @@
+@import "../../shared/bootstrap-breakpoints.sass"
+
+////////////////////////////////////////////////////////////////////////////////
+// Animations
+////////////////////////////////////////////////////////////////////////////////
+
+#pageWrapper h1
+  opacity: 0
+  transform: translateX(10%)
+  transition: transform .3s cubic-bezier(0.250, 0.460, 0.230, 0.995), opacity .3s linear
+
+#pageWrapper.build-in h1
+  opacity: 1
+  transform: translateX(0%)
+
+
+#pageWrapper h1::after
+  width: 0
+  transition: width .4s cubic-bezier(0.045, 1.450, 0.665, 1.000) .5s
+
+#pageWrapper.build-in h1::after
+  width: 72%
+  @include media-breakpoint-up(md)
+    width: 30%
+
+#pageWrapper .rules-column
+  opacity: 0
+  transition: all .3s linear .6s
+
+#pageWrapper.build-in .rules-column
+  opacity: 1

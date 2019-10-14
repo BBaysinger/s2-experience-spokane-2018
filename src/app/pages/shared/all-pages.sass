@@ -1,0 +1,112 @@
+@import "../../shared/fluid-utils.sass"
+@import "./custom-inputs.sass"
+@import "../../shared/bootstrap-breakpoints.sass"
+
+\:host
+  display: block
+  padding-bottom: 30px
+  margin-left: 30px
+  margin-right: 30px
+
+#pageWrapper
+  position: relative
+  &.container
+    @include media-breakpoint-up(lg)
+      max-width: 1500px
+
+h1
+  color: #AAE4D7
+  text-transform: uppercase
+  letter-spacing: -1px
+  font-size: 55px
+  @include fluid-type(320px, 1600px, 34px, 68px)
+
+h1::after
+  content: ''
+  margin-top: 28px
+  margin-bottom: 42px
+  height: 4px
+  display: block
+  background-color: #AAAE37
+  width: 72%
+
+h3
+  font-size: 30px
+  margin-bottom: 20px
+  @include fluid-type(320px, 1600px, 26px, 30px)
+
+h4
+  font-size: 25px
+
+.uppercase
+  text-transform: uppercase
+
+.copy-block
+  i
+    color: #FFC200
+    font-style: normal
+  li
+    margin-bottom: 40px
+  li:last-child
+    margin-bottom: 0
+
+.left-col-nested, .right-col-nested
+  position: relative
+
+// TODO: This should be nested under .copy-block, but that's not working. Not sure why.
+p, ul
+  margin-bottom: 50px
+  font-size: 28px
+  @include fluid-type(992px, 1600px, 20px, 24px)
+
+////////////////////////////////////////////////////////////////////////////////
+// Buttons !!!
+////////////////////////////////////////////////////////////////////////////////
+
+button
+  height: 60px
+  width: 100%
+  font-size: 18px
+  text-transform: uppercase
+  cursor: pointer
+  margin-bottom: 0px
+  line-height: 20px
+  overflow: hidden
+  margin-bottom: 20px
+  *
+    line-height: 0px
+  @include media-breakpoint-up(sm)
+    width: 180px
+  @include media-breakpoint-up(lg)
+    width: 255px
+    height: 86px
+    font-size: 24px
+
+.yellow-btn
+  background-color: #FEC100
+  border: 0
+  color: #000000
+
+.border-btn
+  background-color: transparent
+  border: 2px solid #FFFFFF
+  color: #FFFFFF
+
+.awesome-top-margin
+  margin-top: 30px
+
+////////////////////////////////////////////////////////////////////////////////
+//
+////////////////////////////////////////////////////////////////////////////////
+
+@include media-breakpoint-up(md)
+  .awesome-top-margin
+    margin-top: 50px
+  h1::after
+    width: 32%
+
+@include media-breakpoint-up(sm)
+  .copy-block
+    max-width: none
+  button
+    width: 100%

@@ -1,0 +1,12 @@
+@import "../../shared/bootstrap-breakpoints.sass"
+
+$offset: 10px
+
+\:host
+  position: fixed
+  top: $offset
+  left: 0px
+  @include media-breakpoint-up(md)
+    left: $offset
+  @include media-breakpoint-up(xl)
+    left: $offset * 2

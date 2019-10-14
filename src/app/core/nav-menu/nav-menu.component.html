@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-lg navbar-light" [ngClass]="{'in show': !isCollapsed, 'build-in': !buildIn}">
+
+  <div class="collapse navbar-collapse container" [collapse]="isCollapsed" id="navbarSupportedContent" style="display: block" (click)="toggle()">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" [routerLinkActive]="'active'" routerLink="contest">Contest</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLinkActive]="'active'" routerLink="enter">Enter to Win</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLinkActive]="'active'" routerLink="rules">Rules</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLinkActive]="'active'" routerLink="experience">#ExperienceSpokane</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLinkActive]="'active'" routerLink="about">About Seven2</a>
+      </li>
+    </ul>
+  </div>
+
+</nav>
+
+<button class="navbar-toggler" (click)="toggle()" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="button-icon" *ngIf="isCollapsed" class="fa fa-bars" aria-hidden="true">
+    <span class="line"></span>
+    <span class="line"></span>
+    <span class="line"></span>
+  </span>
+  <span class="button-icon" *ngIf="!isCollapsed" class="fa fa-times-thin fa-2x" aria-hidden="true">
+    <span class="line"></span>
+    <span class="line"></span>
+  </span>
+</button>

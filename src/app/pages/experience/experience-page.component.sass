@@ -1,0 +1,64 @@
+@import "../../shared/bootstrap-breakpoints.sass"
+@import "../../shared/fluid-utils.sass"
+
+$buttonWidth: 86px
+$buttonMargin: 34px
+
+h1#experience
+  @include media-breakpoint-down(sm)
+    @include fluid-type(320px, 1600px, 21px, 68px)
+
+#feedWrapper
+  width: 100%
+  @include media-breakpoint-up(md)
+    width: calc(100% - #{$buttonWidth} - #{$buttonMargin})
+    margin-left: 0 !important
+    margin-right: 0 !important
+    padding-left: 0 !important
+    padding-right: 0 !important
+    display: inline-block
+
+#feedColumn
+  display: flex
+  justify-content: center
+  align-items: center
+
+.aggregator-column
+  margin-bottom: 20px
+  img
+    max-width: 100%
+
+.city-graphic
+  position: fixed
+  bottom: -20px
+  left: -50px
+  width: 40%
+  min-width: 400px
+  max-width: 650px
+  @media screen and (max-width: 991px)
+    display: none
+
+#buttonsContainer
+  display: none
+  text-align: right
+  @include media-breakpoint-up(md)
+    display: inline-block
+    width: $buttonWidth + $buttonMargin
+  button
+    width: $buttonWidth
+    .fontello
+      font-size: 80px
+      margin-right: initial
+      width: initial
+      line-height: 50px
+
+// h1[_ngcontent-c5]
+//   @media screen and (min-width: 320px)
+//     font-size: 6vw
+//   @media screen and (min-width: 768px)
+//     font-size: 68px
+//   @media screen and (max-width: 985px)
+//     font-size: 6vw
+
+.modal
+  border: 1px solid red !important

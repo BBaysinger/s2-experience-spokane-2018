@@ -1,0 +1,106 @@
+@import "../../shared/bootstrap-breakpoints.sass"
+@import "../../shared/variables.sass"
+
+#enter_form > div > div
+  padding: 0
+
+.left-col
+  display: block
+
+.left-col-nested
+  display: block
+  margin-right: 0px
+  margin-left: auto
+
+ul
+  padding-left: 1.2em
+
+p, ul
+  margin-bottom: 0 !important
+
+input[type="text"]
+  width: 100%
+  border-radius: 0
+  margin-bottom: 14px
+  background-color: rgba(255, 255, 255, 0.7)
+  border: 2px solid white
+  height: 40px
+  font-size: 20px
+  padding-top: 10px
+  padding-left: 15px
+  text-transform: none
+  @include media-breakpoint-up(lg)
+    margin-bottom: 23px
+    height: 60px
+    font-size: 24px
+  &.placeholder-shown
+    text-transform: uppercase
+
+.custom-checkbox-label
+  line-height: 32px
+  margin-top: 20px
+  @include media-breakpoint-up(md)
+    margin-top: 10px
+
+.button-container
+  margin-top: 30px
+
+a:link
+  color: #A88ABF
+
+a:visited
+  color: #A88ABF
+
+////////////////////////////////////////////////////////////////////////////////
+// Graphic
+////////////////////////////////////////////////////////////////////////////////
+
+.food-graphic
+  position: fixed
+  width: 30%
+  max-width: 650px
+  right: -4.5%
+  bottom: 0px
+  display: block
+  @media screen and (max-width: 767px)
+    position: relative
+    width: 40%
+    margin-bottom: 20px
+    margin-top: 10px
+    right: auto
+
+////////////////////////////////////////////////////////////////////////////////
+// Desktop
+////////////////////////////////////////////////////////////////////////////////
+
+@include media-breakpoint-up(lg)
+  button
+    width: 255px !important
+  #enter_form
+    .col-sm-6:first-of-type
+      padding-right: 10px !important
+    .col-sm-6:last-of-type
+      padding-left: 10px !important
+
+@include media-breakpoint-up(md)
+  .right-col-nested.copy-block
+    max-width: 80%
+    position: absolute
+
+@include media-breakpoint-up(sm)
+  #enter_form
+    .col-sm-6:first-of-type
+      padding-right: 6px
+    .col-sm-6:last-of-type
+      padding-left: 6px
+
+////////////////////////////////////////////////////////////////////////////////
+// Form
+////////////////////////////////////////////////////////////////////////////////
+
+button[type="submit"]
+  margin-top: 20px
+
+button[type="submit"]:disabled
+  background-color: #c39423 !important
+  pointer-events: none

@@ -1,0 +1,165 @@
+.nav-item
+    position: relative
+
+.nav-item::after
+    content: ""
+    display: block
+    position: absolute
+    left: 8px
+    bottom: 21px
+    width: 0
+    height: 4px
+    background-color: #000000
+    transition: width .4s cubic-bezier(0.045, 1.450, 0.665, 1.000)
+
+.nav-item:hover::after
+    width: 60px
+
+@media screen and (max-width: 991px)
+    .navbar
+        height: 0
+        transition: height 1s cubic-bezier(0.495, 0.000, 0.000, 1.000)
+
+        .nav-item
+            opacity: 0
+            transform: translateY(100%)
+            transition: all .6s cubic-bezier(0.495, 0.000, 0.000, 1.000) .25s
+
+        .nav-item:nth-of-type(2)
+            transition-delay: .35s
+        .nav-item:nth-of-type(3)
+            transition-delay: .45s
+        .nav-item:nth-of-type(4)
+            transition-delay: .55s
+        .nav-item:nth-of-type(5)
+            transition-delay: .65s
+
+    .build-in
+        .nav-item
+            opacity: 1
+            transform: translateY(0%)
+
+        .nav-item::after
+            left: 1px
+
+    .fa-bars:before
+        display: none
+
+    .fa-bars
+        width: 30px
+        height: 22px
+
+        .line
+            display: block
+            position: relative
+            width: 100%
+            height: 3px
+            background-color: #FFC200
+            transform-origin: 50% 50%
+
+        .line:not(:first-child)
+            margin-top: 6px
+
+
+
+    .navbar-toggler:hover 
+        .fa-bars
+            .line
+                animation-name: nav-open-bars-hover
+                animation-duration: .4s
+                animation-fill-mode: forwards
+
+            .line:nth-of-type(2)
+                animation-delay: .1s
+
+            .line:nth-of-type(3)
+                animation-delay: .2s
+            
+    @keyframes nav-open-bars-hover
+        0%
+            transform: translateY(0)
+        50%
+            transform: translateY(-150%)
+            opacity: 0
+        51%
+            transform: translateY(50%)
+        100%
+            transform: translateY(0)
+            opacity: 1
+
+
+    .fa-times-thin:before
+        display: none
+
+    .fa-times-thin
+        position: relative
+        width: 30px
+        height: 22px
+
+        .line
+            display: block
+            position: absolute
+            top: 50%
+            width: 100%
+            height: 3px
+            background-color: #000000
+            transform-origin: 50% 50%
+            animation-duration: .5s
+            animation-fill-mode: forwards
+        .line:nth-of-type(1)
+            transform: rotateZ(45deg)
+            animation-name: nav-close-bar1-off
+        .line:nth-of-type(2)
+            transform: rotateZ(-45deg)
+            animation-name: nav-close-bar2-off
+
+    .navbar-toggler:hover 
+        .fa-times-thin
+            .line:nth-of-type(1)
+                animation-name: nav-close-bar1-hover
+            .line:nth-of-type(2)
+                animation-name: nav-close-bar2-hover
+
+    @keyframes nav-close-bar1-hover
+        0%
+            transform: rotateZ(45deg)
+            top: 50%
+        30%
+            transform: rotateZ(0)
+            top: 40%
+        80%
+            transform: rotateZ(0)
+            top: 120%
+        100%
+            transform: rotateZ(0)
+            top: 100%
+
+    @keyframes nav-close-bar2-hover
+        0%
+            transform: rotateZ(-45deg)
+            top: 50%
+        30%
+            transform: rotateZ(0)
+            top: 40%
+        80%
+            transform: rotateZ(0)
+            top: 120%
+        100%
+            transform: rotateZ(0)
+            top: 100%
+
+    @keyframes nav-close-bar1-off
+        0%
+            transform: rotateZ(0deg)
+            top: 100%
+        100%
+            transform: rotateZ(45deg)
+            top: 50%
+
+    @keyframes nav-close-bar2-off
+        0%
+            transform: rotateZ(0deg)
+            top: 100%
+        100%
+            transform: rotateZ(-45deg)
+            top: 50%

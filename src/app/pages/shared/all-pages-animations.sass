@@ -1,0 +1,44 @@
+.yellow-btn,
+.border-btn 
+    position: relative
+        
+.yellow-btn *
+    position: relative
+    pointer-events: none
+
+.yellow-btn:before,
+.border-btn:before
+    content: ""
+    display: block
+    position: absolute
+    z-index: 0
+    top: 0
+    left: 0
+    width: 0
+    height: 100%
+    background-color: #ffd242
+    transition: width .3s cubic-bezier(0.495, 0.000, 0.000, 1.000)
+
+.border-btn:before
+    background-color: rgba(255, 255, 255, .1)
+
+.yellow-btn:hover::before,
+.border-btn:hover::before
+    width: 100%
+
+// .yellow-btn .btn-copy,
+// .border-btn .btn-copy
+//     transition: letter-spacing .2s cubic-bezier(0.495, 0.000, 0.000, 1.000)
+
+// .yellow-btn:hover .btn-copy,
+// .border-btn:hover .btn-copy
+//     letter-spacing: .03em
+    // animation: btn-copy-hover .5s forwards
+
+// @keyframes btn-copy-hover
+//     0%
+//         letter-spacing: normal
+//     50%
+//         letter-spacing: .03em
+//     100%
+//         letter-spacing: normal

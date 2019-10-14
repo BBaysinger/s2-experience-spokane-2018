@@ -1,0 +1,31 @@
+@import "../../shared/bootstrap-breakpoints.sass"
+
+ol
+  font-size: 12px
+  padding-left: 10px
+  margin-bottom: 0px
+  li
+    padding-left: 10px
+  li:not(:last-child)
+    margin-bottom: 5px
+
+.rules-column:not(:first-child) li:first-child
+  list-style-type: none
+
+
+.hill-graphic
+  position: fixed
+  bottom: 50px
+  right: 0
+  width: 30%
+  max-width: 417px
+  @media screen and (max-width: 991px)
+    bottom: -10px
+    right: -2px
+  @media screen and (max-width: 767px)
+    width: 50%
+    max-width: 300px
+
+// @media screen and (max-width: 767px)
+.rules-column:last-of-type 
+  padding-bottom: 200px

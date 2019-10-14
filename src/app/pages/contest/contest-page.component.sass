@@ -1,0 +1,26 @@
+@import "../../shared/bootstrap-breakpoints.sass"
+
+.right-col
+  margin-top: 100px
+
+// .left-col > img
+//   width: 100%
+//   max-width: 512px
+
+canvas
+  width: 100%
+  // max-width: 512px
+  // height: 512px
+
+.right-col
+  margin-top: 0px
+  @include media-breakpoint-up(xl)
+    margin-top: 100px
+
+.left-col
+  > img
+    @include media-breakpoint-up(md)
+      display: initial
+      width: 100%
+      max-width: 512px
+    display: none
