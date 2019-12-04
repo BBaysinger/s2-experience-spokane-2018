@@ -1,3 +1,7 @@
+# What is this?
+
+This is a site created by Seven2 Interactive to get some publicty to bring talent into the agency. The project was abandoned after near completion, and it is possibly the only relevant project I can post source for. It doesn't necessarily follow best practices, as for much of our deadline-driven projects we did not have that luxury. Also, a contributing developer was new to TypeScript and Angular.
+
 # S2es
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
