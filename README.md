@@ -1,6 +1,6 @@
 # What is this?
 
-This is a site created by Seven2 Interactive to get some publicty to bring talent into the agency. The project was abandoned after near completion, and it is possibly the only relevant project I can post source for publicly. It doesn't necessarily follow best practices, as for much of our deadline-driven projects we did not have that luxury. Also, a contributing developer was new to TypeScript and Angular. Anyhow, it shows that I can do Angular, and that I like to lint and do proper indenting. ;)
+This is a site created by Seven2 Interactive to get some publicty to bring talent into the agency. The project was abandoned after near completion, and it is possibly the only Angular project I can post source for publicly.  A contributing developer was new to TypeScript and Angular. This project is *extremely simple* compared to Angular work I did with Chalklabs.
 
 # S2es
 
