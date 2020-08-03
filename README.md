@@ -1,6 +1,6 @@
 # What is this?
 
-A site created by Seven2 Interactive to draw talent into the agency. The project was abandoned, but persists as an *extremely simple* (in relation to prior work with Chalklabs) example of Angular work.
+A site created by Seven2 Interactive to draw talent to the agency. The project was abandoned, but persists as an *extremely simple* (in relation to prior work with Chalklabs) example of Angular work.
 
 # S2es
 

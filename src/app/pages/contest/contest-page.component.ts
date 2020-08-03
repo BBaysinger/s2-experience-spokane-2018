@@ -1,7 +1,6 @@
 import { Component, ElementRef, ViewChild, OnInit } from '@angular/core';
 
-import { BsModalService } from 'ngx-bootstrap/modal';
-import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
+import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 
 import { AbstractPageComponent } from 'src/app/pages/shared/abstract-page.component';
 import { CanvasAnimation } from 'src/app/pages/shared/util-canvasAnimation';

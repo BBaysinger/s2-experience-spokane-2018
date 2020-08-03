@@ -123,5 +123,8 @@
       }
     }
   },
-  "defaultProject": "s2es"
+  "defaultProject": "s2es",
+  "cli": {
+    "analytics": "68f5e8fd-068f-4e5d-ab36-88f40a4f0cab"
+  }
 }
