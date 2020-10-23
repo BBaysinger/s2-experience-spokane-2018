@@ -172,6 +172,7 @@ export class EnterPageComponent extends AbstractPageComponent implements OnInit 
    * @memberof EnterPageComponent
    */
   ngAfterViewInit() {
+    
     // TODO: This needs to be started with runOutsideAngular!!!
     const test = new CanvasAnimation({
       canvas: this.canvas.nativeElement,

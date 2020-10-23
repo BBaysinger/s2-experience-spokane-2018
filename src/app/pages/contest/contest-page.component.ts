@@ -8,6 +8,15 @@ import { AnimPaddler } from './anim-paddler';
 import { PageService } from 'src/app/pages/shared/page.service';
 import { VideoPlayerComponent } from 'src/app/pages/shared/video-player/video-player.component';
 
+/**
+ *
+ *
+ * 
+ * @export
+ * @class ContestPageComponent
+ * @extends {AbstractPageComponent}
+ * @implements {OnInit}
+ */
 @Component({
   selector: 's2es-contest-page',
   templateUrl: './contest-page.component.html',
@@ -33,11 +42,18 @@ export class ContestPageComponent extends AbstractPageComponent implements OnIni
 
   /**
    *
+   *
+   * @memberof ContestPageComponent
    */
   playVideo() {
     this.openVideoModal();
   }
 
+  /**
+   *
+   *
+   * @memberof ContestPageComponent
+   */
   openVideoModal() {
     const initialState = {
       // title: 'Modal with component'
@@ -48,10 +64,10 @@ export class ContestPageComponent extends AbstractPageComponent implements OnIni
 
   /**
    *
+   *
+   * @memberof EnterPageComponent
    */
-  ngOnInit() {
-
-    super.ngOnInit();
+  ngAfterViewInit() {
 
     // TODO: This needs to be started with runOutsideAngular!!!
     const test = new CanvasAnimation({
@@ -61,7 +77,5 @@ export class ContestPageComponent extends AbstractPageComponent implements OnIni
       exportRootName: 'experienceSpokane_paddleboarder',
       scaleToWidth: true,
     });
-
   }
-
 }

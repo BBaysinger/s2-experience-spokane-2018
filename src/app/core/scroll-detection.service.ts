@@ -13,19 +13,74 @@ import lethargy from 'lethargy';
 
 export class ScrollDetectionService {
 
+  /**
+   *
+   *
+   * @static
+   * @memberof ScrollDetectionService
+   */
   static readonly INACTIVE_INCREMENT = 100;
 
+  /**
+   *
+   *
+   * @memberof ScrollDetectionService
+   */
   lethargy = new lethargy.Lethargy();
 
+  /**
+   *
+   *
+   * @type {HTMLElement}
+   * @memberof ScrollDetectionService
+   */
   elem: HTMLElement;
+
+  /**
+   *
+   *
+   * @type {HTMLElement}
+   * @memberof ScrollDetectionService
+   */
   parent: HTMLElement;
+
+  /**
+   *
+   *
+   * @type {string}
+   * @memberof ScrollDetectionService
+   */
   routeSegment: string;
+
+  /**
+   *
+   *
+   * @type {NodeJS.Timer}
+   * @memberof ScrollDetectionService
+   */
   inactiveTimeout: NodeJS.Timer;
 
+  /**
+   *
+   *
+   * @memberof ScrollDetectionService
+   */
   activeScrolling = false;
 
+  /**
+   *
+   *
+   * @type {EventListenerOrEventListenerObject}
+   * @memberof ScrollDetectionService
+   */
   boundFunc: EventListenerOrEventListenerObject;
 
+  /**
+   *
+   *
+   * @type {string[]}
+   * @memberof ScrollDetectionService
+   */
   routeList: string[];
 
   /**

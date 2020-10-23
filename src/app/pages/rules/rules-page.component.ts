@@ -18,27 +18,45 @@ import { PageService } from 'src/app/pages/shared/page.service';
 })
 export class RulesPageComponent extends AbstractPageComponent implements OnInit {
 
+  /**
+   *
+   *
+   * @type {ElementRef}
+   * @memberof RulesPageComponent
+   */
   @ViewChild('animCanvas') canvas: ElementRef;
+
+  /**
+   *
+   *
+   * @type {ElementRef}
+   * @memberof RulesPageComponent
+   */
   @ViewChild('animCanvasWrapper') canvasWrapper: ElementRef;
 
+  /**
+   *Creates an instance of RulesPageComponent.
+   * @param {PageService} pageService
+   * @memberof RulesPageComponent
+   */
   constructor(readonly pageService: PageService) {
     super(pageService);
-  } /**
-  *
-  */
- ngOnInit() {
+  }
 
-   super.ngOnInit();
-
-   // TODO: This needs to be started with runOutsideAngular!!!
-   const test = new CanvasAnimation({
-     canvas: this.canvas.nativeElement,
-     wrapper: this.canvasWrapper.nativeElement,
-     animClass: AnimHill,
-     exportRootName: 'experienceSpokane_nature',
-     scaleToWidth: true,
-   });
-
- }
-
+  /**
+   *
+   *
+   * @memberof EnterPageComponent
+   */
+  ngAfterViewInit() {
+    
+    // TODO: This needs to be started with runOutsideAngular!!!
+    const test = new CanvasAnimation({
+      canvas: this.canvas.nativeElement,
+      wrapper: this.canvasWrapper.nativeElement,
+      animClass: AnimHill,
+      exportRootName: 'experienceSpokane_nature',
+      scaleToWidth: true,
+    });
+  }
 }
