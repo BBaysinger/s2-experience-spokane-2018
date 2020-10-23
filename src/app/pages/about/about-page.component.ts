@@ -4,6 +4,13 @@ import { AbstractPageComponent } from 'src/app/pages/shared/abstract-page.compon
 
 import { PageService } from 'src/app/pages/shared/page.service';
 
+/**
+ *
+ *
+ * @export
+ * @class AboutPageComponent
+ * @extends {AbstractPageComponent}
+ */
 @Component({
   selector: 's2es-about-page',
   templateUrl: './about-page.component.html',
@@ -15,6 +22,12 @@ import { PageService } from 'src/app/pages/shared/page.service';
 })
 export class AboutPageComponent extends AbstractPageComponent {
 
+  /**
+   * Creates an instance of AboutPageComponent.
+   *
+   * @param {PageService} pageService
+   * @memberof AboutPageComponent
+   */
   constructor(readonly pageService: PageService) {
     super(pageService);
   }

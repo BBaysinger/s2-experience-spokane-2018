@@ -18,6 +18,7 @@ import { VideoPlayerComponent } from 'src/app/pages/shared/video-player/video-pl
  * @implements {OnInit}
  */
 @Component({
+  
   selector: 's2es-contest-page',
   templateUrl: './contest-page.component.html',
   styleUrls: [
@@ -28,11 +29,36 @@ import { VideoPlayerComponent } from 'src/app/pages/shared/video-player/video-pl
 })
 export class ContestPageComponent extends AbstractPageComponent implements OnInit {
 
+  /**
+   *
+   *
+   * @type {BsModalRef}
+   * @memberof ContestPageComponent
+   */
   bsModalRef: BsModalRef;
 
+  /**
+   *
+   *
+   * @type {ElementRef}
+   * @memberof ContestPageComponent
+   */
   @ViewChild('animCanvas') canvas: ElementRef;
+
+  /**
+   *
+   *
+   * @type {ElementRef}
+   * @memberof ContestPageComponent
+   */
   @ViewChild('animCanvasWrapper') canvasWrapper: ElementRef;
 
+  /**
+   * Creates an instance of ContestPageComponent.
+   * @param {PageService} pageService
+   * @param {BsModalService} modalService
+   * @memberof ContestPageComponent
+   */
   constructor(
     private readonly pageService: PageService,
     private readonly modalService: BsModalService

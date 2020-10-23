@@ -1,5 +1,5 @@
-import { Injectable, HostListener, ElementRef } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
+import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 
 import lethargy from 'lethargy';
 

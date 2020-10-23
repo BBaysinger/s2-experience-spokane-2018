@@ -12,12 +12,36 @@ import { Resolve, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/r
 
 export class DelayResolver implements Resolve<Promise<boolean>> {
 
+  /**
+   *
+   *
+   * @static
+   * @memberof DelayResolver
+   */
   static readonly ROUTE_DELAY = 1000;
 
+  /**
+   *
+   *
+   * @type {NodeJS.Timer}
+   * @memberof DelayResolver
+   */
   sTimeout: NodeJS.Timer;
 
+  /**
+   * Creates an instance of DelayResolver.
+   * @memberof DelayResolver
+   */
   constructor() { }
 
+  /**
+   *
+   *
+   * @param {ActivatedRouteSnapshot} route
+   * @param {RouterStateSnapshot} state
+   * @returns {Promise<boolean>}
+   * @memberof DelayResolver
+   */
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Promise<boolean> {
 
     const promise = new Promise<boolean>((resolve, reject) => {

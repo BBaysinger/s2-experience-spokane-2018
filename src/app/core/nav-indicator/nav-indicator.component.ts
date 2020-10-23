@@ -27,9 +27,10 @@ export class NavIndicatorComponent implements OnInit {
 
   /**
    *
+   *
+   * @memberof NavIndicatorComponent
    */
   ngOnInit() {
 
   }
-
 }

@@ -1,7 +1,6 @@
 import { Component, ElementRef, ViewChild, OnInit } from '@angular/core';
 import { Router, RouterEvent, NavigationEnd, NavigationStart } from '@angular/router';
 
-// import { ScrollDetectionService } from 'core/scroll-detection.service';
 import { AbstractPageComponent } from 'src/app/pages/shared/abstract-page.component';
 
 @Component({
@@ -11,22 +10,66 @@ import { AbstractPageComponent } from 'src/app/pages/shared/abstract-page.compon
 })
 export class AppComponent implements OnInit {
 
+  /**
+   *
+   *
+   * @type {ElementRef}
+   * @memberof AppComponent
+   */
   @ViewChild('floatContainer') floatContainer: ElementRef;
+
+  /**
+   *
+   *
+   * @type {ElementRef}
+   * @memberof AppComponent
+   */
   @ViewChild('floatContent') floatContent: ElementRef;
 
+  /**
+   *
+   *
+   * @memberof AppComponent
+   */
   backgroundClassName = '';
-  // ==========
-  // ANIMATIONS
+
+  /**
+   *
+   *
+   * @memberof AppComponent
+   */
   collapseShade = false;
+
+  /**
+   *
+   *
+   * @memberof AppComponent
+   */
   buildInReady = false;
 
+  /**
+   *
+   *
+   * @type {AbstractPageComponent}
+   * @memberof AppComponent
+   */
   pageComponent: AbstractPageComponent;
 
+  /**
+   *
+   *
+   * @type {ElementRef}
+   * @memberof AppComponent
+   */
   @ViewChild('pageShade') pageShade: ElementRef;
 
+  /**
+   * Creates an instance of AppComponent.
+   * @param {Router} router
+   * @memberof AppComponent
+   */
   constructor(
     private router: Router,
-    // private scrollDetectionService: ScrollDetectionService,
   ) {
 
     this.router.events.subscribe((event: RouterEvent) => {
@@ -52,6 +95,12 @@ export class AppComponent implements OnInit {
 
   }
 
+  /**
+   *
+   *
+   * @param {*} componentRef
+   * @memberof AppComponent
+   */
   onOutletActivate(componentRef: any) {
     this.pageComponent = componentRef;
     // ==========
@@ -64,6 +113,11 @@ export class AppComponent implements OnInit {
     }, { once: true });
   }
 
+  /**
+   *
+   *
+   * @memberof AppComponent
+   */
   ngOnInit() {
 
     // https://stackoverflow.com/a/51274898/1253298
@@ -92,8 +146,6 @@ export class AppComponent implements OnInit {
           this.floatContainer.nativeElement.scrollTo(0, 0);
         }
       }
-
     });
   }
-
 }

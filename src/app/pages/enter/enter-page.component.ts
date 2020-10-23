@@ -59,7 +59,7 @@ export class EnterPageComponent extends AbstractPageComponent implements OnInit 
   @ViewChild('animCanvasWrapper') canvasWrapper: ElementRef;
 
   /**
-   *Creates an instance of EnterPageComponent.
+   * Creates an instance of EnterPageComponent.
    *
    * @param {PageService} pageService
    * @param {HttpClient} http

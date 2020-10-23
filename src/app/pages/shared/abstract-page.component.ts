@@ -1,9 +1,10 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { PageService } from 'src/app/pages/shared/page.service';
 
 /**
- *
+ * Though Angular really isn't inheritance-based, I used an abstract class just to keep things consistent
+ * with a junior developer.
  *
  * @export
  * @class AbstractPageComponent
@@ -23,7 +24,7 @@ export class AbstractPageComponent implements OnInit {
   buildInReady = false;
 
   /**
-   *Creates an instance of AbstractPageComponent.
+   * Creates an instance of AbstractPageComponent.
    * @param {PageService} pageService
    * @memberof AbstractPageComponent
    */

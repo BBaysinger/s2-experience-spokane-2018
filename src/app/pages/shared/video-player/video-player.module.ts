@@ -13,6 +13,12 @@ const COMPONENTS = [
   VideoPlayerComponent,
 ];
 
+/**
+ *
+ *
+ * @export
+ * @class VideoPlayerModule
+ */
 @NgModule({
   declarations: [
     ...COMPONENTS,

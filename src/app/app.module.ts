@@ -5,6 +5,12 @@ import { CoreModule } from 'src/app/core/core.module';
 import { AppRoutingModule } from 'src/app/core/app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+/**
+ *
+ *
+ * @export
+ * @class AppModule
+ */
 @NgModule({
   declarations: [
     AppComponent,

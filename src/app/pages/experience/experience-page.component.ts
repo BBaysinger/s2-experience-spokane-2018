@@ -52,7 +52,7 @@ export class ExperiencePageComponent extends AbstractPageComponent implements On
   @ViewChild('animCanvasWrapper') canvasWrapper: ElementRef;
 
   /**
-   *Creates an instance of ExperiencePageComponent.
+   * Creates an instance of ExperiencePageComponent.
    *
    * @param {PageService} pageService
    * @memberof ExperiencePageComponent

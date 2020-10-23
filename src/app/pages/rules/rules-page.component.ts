@@ -7,6 +7,14 @@ import { AnimHill } from './anim-hill';
 
 import { PageService } from 'src/app/pages/shared/page.service';
 
+/**
+ *
+ *
+ * @export
+ * @class RulesPageComponent
+ * @extends {AbstractPageComponent}
+ * @implements {OnInit}
+ */
 @Component({
   selector: 's2es-rules-page',
   templateUrl: './rules-page.component.html',
@@ -35,7 +43,7 @@ export class RulesPageComponent extends AbstractPageComponent implements OnInit 
   @ViewChild('animCanvasWrapper') canvasWrapper: ElementRef;
 
   /**
-   *Creates an instance of RulesPageComponent.
+   * Creates an instance of RulesPageComponent.
    * @param {PageService} pageService
    * @memberof RulesPageComponent
    */
