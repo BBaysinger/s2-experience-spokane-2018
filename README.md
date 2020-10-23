@@ -1,6 +1,10 @@
 # What is this?
 
-Created by Seven2 Interactive to draw talent to the agency. The project was abandoned, but persists as an *extremely simple* (in relation to prior work with Chalklabs) example of Angular work.
+Created by Seven2 Interactive to draw talent to the agency. Project was put on hold, but persists here as one of the only Angular projects I can show source for.
+
+(This project pales in comparison other work I've done in Angular.)
+
+...Working on documenting and cleaning up code as time allows.
 
 # S2es
 
