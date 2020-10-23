@@ -3,12 +3,14 @@ import { Router, NavigationEnd } from '@angular/router';
 
 import lethargy from 'lethargy';
 
-import { appRoutes } from 'src/app/core/app-routing.module';
-
-@Injectable()
 /**
  *
+ *
+ * @export
+ * @class ScrollDetectionService
  */
+@Injectable()
+
 export class ScrollDetectionService {
 
   static readonly INACTIVE_INCREMENT = 100;
@@ -26,26 +28,44 @@ export class ScrollDetectionService {
 
   routeList: string[];
 
+  /**
+   * Creates an instance of ScrollDetectionService.
+   * 
+   * @param {Router} router
+   * @memberof ScrollDetectionService
+   */
   constructor(private router: Router) {
 
     this.boundFunc = this.onScroll.bind(this);
 
-    router.events.subscribe((event) => {
-      if (event instanceof NavigationEnd) {
-        // console.log(this.router.url);
-      }
-    });
+    // router.events.subscribe((event) => {
+    //   if (event instanceof NavigationEnd) {
+    //     console.log(this.router.url);
+    //   }
+    // });
 
-    for (let i = 0; i < 200; i++) {
-      // TODO: Capure routes names into array to facilitate Array.indexOf to capture the index.
-      // this.routeList
-    }
+    // for (let i = 0; i < 200; i++) {
+    // TODO: Capure routes names into array to facilitate Array.indexOf to capture the index.
+    // this.routeList
+    // }
   }
 
+  /**
+   *
+   *
+   * @param {number} direction
+   * @memberof ScrollDetectionService
+   */
   navigate(direction: number) {
     // console.log(direction);
   }
 
+  /**
+   *
+   *
+   * @param {MouseWheelEvent} event
+   * @memberof ScrollDetectionService
+   */
   onScroll(event: MouseWheelEvent) {
 
     const val = this.lethargy.check(event);
@@ -66,8 +86,6 @@ export class ScrollDetectionService {
             this.navigate(-1);
           }
         } else {
-          // console.log(this.elem.scrollHeight, this.elem.scrollTop, this.parent.scrollTop, this.parent.offsetHeight);
-          // console.log(this.parent.scrollTop, this.parent.offsetHeight, this.elem.scrollHeight);
           if (this.parent.scrollTop + this.parent.offsetHeight === this.elem.scrollHeight) {
             this.navigate(1);
           }
@@ -80,6 +98,13 @@ export class ScrollDetectionService {
     }
   }
 
+  /**
+   *
+   *
+   * @param {HTMLElement} elem
+   * @param {HTMLElement} parent
+   * @memberof ScrollDetectionService
+   */
   init(elem: HTMLElement, parent: HTMLElement) {
 
     if (elem) {
