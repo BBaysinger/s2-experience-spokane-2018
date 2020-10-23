@@ -3,5 +3,5 @@ tslint.json
 # dependencies
 node_modules/
 
-#misc
+# miscellaneous
 .DS_Store
