@@ -15,7 +15,6 @@ const EXPORTS = [
 ];
 
 const COMPONENTS = [
-  // HeaderComponent,
   BackgroundComponent,
 ];
 
@@ -26,6 +25,12 @@ const FEATURE_MODULES = [
   HeaderModule,
 ];
 
+/**
+ *
+ *
+ * @export
+ * @class CoreModule
+ */
 @NgModule({
   declarations: [
     ...COMPONENTS,
@@ -43,4 +48,5 @@ const FEATURE_MODULES = [
     ScrollDetectionService,
   ],
 })
+
 export class CoreModule { }

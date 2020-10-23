@@ -14,6 +14,12 @@ const EXPORTS = [
 
 ];
 
+/**
+ *
+ *
+ * @export
+ * @class NavIndicatorModule
+ */
 @NgModule({
   declarations: [
     ...COMPONENTS,

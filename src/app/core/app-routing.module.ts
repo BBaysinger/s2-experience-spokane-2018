@@ -46,6 +46,12 @@ export const appRoutes: Routes = [
   },
 ];
 
+/**
+ *
+ *
+ * @export
+ * @class AppRoutingModule
+ */
 @NgModule({
   imports: [RouterModule.forRoot(appRoutes)],
   exports: [RouterModule],

@@ -9,6 +9,12 @@ const COMPONENTS = [
   NavMenuComponent,
 ];
 
+/**
+ *
+ *
+ * @export
+ * @class NavMenuModule
+ */
 @NgModule({
   declarations: [
     ...COMPONENTS,

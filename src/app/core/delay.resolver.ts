@@ -1,10 +1,15 @@
 import { Injectable } from '@angular/core';
 import { Resolve, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 
-@Injectable()
 /**
  * Delays components from route changes, so page tranistion outs have time to complete.
+ *
+ * @export
+ * @class DelayResolver
+ * @implements {Resolve<Promise<boolean>>}
  */
+@Injectable()
+
 export class DelayResolver implements Resolve<Promise<boolean>> {
 
   static readonly ROUTE_DELAY = 1000;
