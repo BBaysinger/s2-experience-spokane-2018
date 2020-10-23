@@ -7,6 +7,14 @@ import { AnimFood } from './anim-food';
 import { PageService } from 'src/app/pages/shared/page.service';
 import { FormControl, FormGroup, Validators, FormBuilder } from '@angular/forms';
 
+/**
+ *
+ *
+ * @export
+ * @class EnterPageComponent
+ * @extends {AbstractPageComponent}
+ * @implements {OnInit}
+ */
 @Component({
   selector: 's2es-enter-page',
   templateUrl: './enter-page.component.html',
@@ -19,12 +27,45 @@ import { FormControl, FormGroup, Validators, FormBuilder } from '@angular/forms'
 })
 export class EnterPageComponent extends AbstractPageComponent implements OnInit {
 
+  /**
+   *
+   *
+   * @type {FormGroup}
+   * @memberof EnterPageComponent
+   */
   entryForm: FormGroup;
+
+  /**
+   *
+   *
+   * @memberof EnterPageComponent
+   */
   inited = false;
 
+  /**
+   *
+   *
+   * @type {ElementRef}
+   * @memberof EnterPageComponent
+   */
   @ViewChild('animCanvas') canvas: ElementRef;
+
+  /**
+   *
+   *
+   * @type {ElementRef}
+   * @memberof EnterPageComponent
+   */
   @ViewChild('animCanvasWrapper') canvasWrapper: ElementRef;
 
+  /**
+   *Creates an instance of EnterPageComponent.
+   *
+   * @param {PageService} pageService
+   * @param {HttpClient} http
+   * @param {FormBuilder} formBuilder
+   * @memberof EnterPageComponent
+   */
   constructor(
     private readonly pageService: PageService,
     private readonly http: HttpClient,
@@ -48,9 +89,15 @@ export class EnterPageComponent extends AbstractPageComponent implements OnInit 
     };
   }
 
-  // TODO: This gives a HttpResponseError, even though it is identical to what Joe has here that works without errors:
-  // http://staging.seven2.net/seven2/experience_spokane/joe-test/
-  // The data populates as expected, even with the error.
+  /**
+   *
+   * 
+   * TODO: This gives a HttpResponseError, even though it is identical to what Joe has here that works without errors:
+   * http://staging.seven2.net/seven2/experience_spokane/joe-test/
+   * The data populates as expected, even with the error.
+   *
+   * @memberof EnterPageComponent
+   */
   onSubmit() {
     const url = 'https://script.google.com/macros/s/AKfycbyRrxv8Ri-GRpuXqWXo2inCPzmAE8mG6Q8oQIGPmUeMaGbD5jCn/exec?';
     const q: string[] = [];
@@ -72,18 +119,23 @@ export class EnterPageComponent extends AbstractPageComponent implements OnInit 
   /**
    * Since this is not supported on MS browsers.
    */
-  placeholderShown(id: string): boolean {
-    if (this.inited) {
-      if (this.entryForm.get(id).value !== null) {
-        return !this.entryForm.get(id).value.length;
-      } else {
-        // I don't know why this is null.
-        // throw new Error(id);
-        // return false;
-      }
-    }
-  }
+  // placeholderShown(id: string): boolean {
+  //   if (this.inited) {
+  //     if (this.entryForm.get(id).value !== null) {
+  //       return !this.entryForm.get(id).value.length;
+  //     } else {
+  //       // I don't know why this is null.
+  //       // throw new Error(id);
+  //       // return false;
+  //     }
+  //   }
+  // }
 
+  /**
+   *
+   *
+   * @memberof EnterPageComponent
+   */
   setupForm() {
 
     const v = Validators;
@@ -103,6 +155,8 @@ export class EnterPageComponent extends AbstractPageComponent implements OnInit 
 
   /**
    *
+   *
+   * @memberof EnterPageComponent
    */
   ngOnInit() {
 
@@ -110,6 +164,14 @@ export class EnterPageComponent extends AbstractPageComponent implements OnInit 
 
     this.setupForm();
 
+  }
+
+  /**
+   *
+   *
+   * @memberof EnterPageComponent
+   */
+  ngAfterViewInit() {
     // TODO: This needs to be started with runOutsideAngular!!!
     const test = new CanvasAnimation({
       canvas: this.canvas.nativeElement,
@@ -119,7 +181,7 @@ export class EnterPageComponent extends AbstractPageComponent implements OnInit 
       scaleToWidth: true,
     });
 
-    this.inited = true;
+    // this.inited = true;
 
   }
 
