@@ -1,8 +1,8 @@
 # What is this?
 
-Very simple SPA created by me and Seven2 Interactive to draw talent to the agency. Project was put on hold, but persists here as it happens that it's the only Angular projects I can show source for.
+Very simple SPA created by me and Seven2 Interactive to draw talent to the agency. Project was put on hold, but persists here as it happens that it's the only Angular project I can show source for so far.
 
-...Working on documenting and cleaning up as time allows.
+Working on documenting and cleaning up as time allows, *but* this isn't necessarily the kind a project where documentation is crucial, but will be working that in more as it may be scrutinized at this point.
 
 # S2es
 
