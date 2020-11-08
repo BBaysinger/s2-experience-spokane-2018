@@ -1,8 +1,10 @@
 # What is this?
 
-Very simple SPA created by me and Seven2 Interactive to draw talent to the agency. Project was put on hold, but persists here as it happens that it's the only Angular project I can show source for so far.
+Very simple SPA created by me and Seven2 Interactive to draw talent to the agency. Project was put on hold, but persists here as it happens that it's the only Angular project I can show source for so far... Legally and ethically.
 
-Working on documenting and cleaning up as time allows.
+TODO: Working on documenting and cleaning up as time allows.
+
+TODO: There was a junior developer w/o TS experience helping on this. So a number of things to square up if this is to remain a code example.
 
 # S2es
 
